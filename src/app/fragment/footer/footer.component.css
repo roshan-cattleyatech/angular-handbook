@@ -1,0 +1,9 @@
+section{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    font-size: 0.8em;
+    text-align: center;
+}

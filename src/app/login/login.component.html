@@ -1,0 +1,34 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3">
+                <form (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" formControlName="username" class="form-control"/>
+                        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                            <div *ngIf="f.username.errors.required">Username is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" formControlName="password" class="form-control"/>
+                        <!-- <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                        </div> -->
+                    </div>
+                    <button [disabled]="loading" class="btn btn-primary">
+                        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                        Login
+                    </button>
+                </form>
+                <!-- <h3>Login</h3>
+                <p>Username</p>
+                <input type="text" class="inputField"/>
+                <p>Password</p>
+                <input type="password" class="inputField"/>
+                <a [routerLink]="['/handbook']"> <button>Login</button></a> -->
+            </div>
+        </div>
+    </div>
+</section>    
